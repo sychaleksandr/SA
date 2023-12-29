@@ -1,0 +1,12 @@
+Source: calcfiles
+Version: 1.0.0
+Section: utils
+Priority: optional
+Maintainer: Sych Oleksandr <sychaleksandr04@gmail.com>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 4.5.0
+Homepage: https://github.com/sychaleksandr/SA
+Package: calcfiles
+Architecture: all
+Depends: bash
+Description: Script to calculate files in a directory (excluding repositories and links)
