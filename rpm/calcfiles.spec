@@ -12,11 +12,11 @@ BuildArch:      noarch
 calc_files.sh -it is a simple script to count files in directory, excluding links and repositories
 
 %prep
-%autosetup -n oc-main
+%autosetup -n SA-main
 
 %install
 mkdir -p %{buildroot}/usr/bin
-install -m 755 %{_builddir}/oc-main/calc_files.sh %{buildroot}/usr/bin/calc_files
+install -m 755 %{_builddir}/SA-main/calc_files.sh %{buildroot}/usr/bin/calc_files
 
 %files
 /usr/bin/calc_files
