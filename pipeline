@@ -1,0 +1,32 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Execute commands') {
+            steps {
+                script {
+                    sh 'mkdir testdeb'
+                    sh 'mkdir testdeb/DEBIAN'
+                    sh 'mkdir testdeb/usr'
+                    sh 'mkdir testdeb/usr/local'
+                    sh 'mkdir testdeb/usr/local/bin'
+                    sh 'wget https://github.com/sychaleksandr/SA/archive/main.zip'
+                    sh 'unzip main.zip'
+                    sh 'mv os_labs-main/debian/control testdeb/DEBIAN'
+                    sh 'mv os_labs-main/calc_files.sh testdeb/usr/local/bin/'
+                    sh 'dpkg-deb --build testdeb'
+                }
+            }
+        }
+        stage('Install Debian Package') {
+            steps {
+                script {
+                    sh 'dpkg -i testdeb.deb'
+                    sh 'chmod +x /usr/local/bin/calc_files.sh'
+                    sh 'calc_files.sh --check_dir=os_labs-main'
+                    sh 'rm -r os_labs-main'
+                }
+            }
+        }
+    }
+}
