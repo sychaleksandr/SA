@@ -9,4 +9,4 @@ Homepage: https://github.com/sychaleksandr/SA
 Package: calcfiles
 Architecture: all
 Depends: bash
-Description: Script to calculate files in a directory (excluding repositories and links)
+Description: Script to calculate files in a directory

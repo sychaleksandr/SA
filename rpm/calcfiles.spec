@@ -1,7 +1,7 @@
 Name:           calcfiles
 Version:        1.0
 Release:        1%{?dist}
-Summary:        Simple script for calculating the amount of files in directory(excluding repositories and links)
+Summary:        Simple script to count files in directory, excluding links and repositories
 Requires:       unzip
 License:        MIT
 URL:            https://github.com/sychaleksandr/SA
@@ -9,7 +9,7 @@ Source0:        https://github.com/sychaleksandr/SA/archive/main.zip
 BuildArch:      noarch
 
 %description
-calc_files.sh - Simple script for calculating the amount of files in directory(excluding repositories and links)
+calc_files.sh -it is a simple script to count files in directory, excluding links and repositories
 
 %prep
 %autosetup -n oc-main
