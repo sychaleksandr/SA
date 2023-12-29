@@ -6,6 +6,7 @@ Requires:       unzip
 License:        MIT
 URL:            https://github.com/sychaleksandr/SA
 Source0:        https://github.com/sychaleksandr/SA/archive/main.zip
+
 BuildArch:      noarch
 
 %description
