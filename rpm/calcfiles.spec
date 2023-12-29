@@ -9,7 +9,7 @@ Source0:        https://github.com/sychaleksandr/SA/archive/main.zip
 BuildArch:      noarch
 
 %description
-calc_files.sh - это простой скрипт, который подсчитывает количество файлов в каталоге.
+calc_files.sh - Simple script for calculating the amount of files in directory(excluding repositories and links)
 
 %prep
 %autosetup -n oc-main
@@ -23,4 +23,4 @@ install -m 755 %{_builddir}/oc-main/calc_files.sh %{buildroot}/usr/bin/calc_file
 
 %changelog
 * Wed Dec 29 2023 Sych Oleksandr <sychaleksandr04@gmail.com> - 1.0-1
-- Первоначальная сборка
+- First build
