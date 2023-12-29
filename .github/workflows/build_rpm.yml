@@ -30,14 +30,14 @@ jobs:
           cp rpm/calcfiles.spec ~/rpmbuild/SPECS/
           cd ~/rpmbuild/SOURCES/
           wget https://github.com/sychaleksandr/SA/archive/main.zip
-          cd ../../
-          rpmbuild -bs --define "dist .generic" rpmbuild/SPECS/calcfiles.spec
-          rpmbuild --rebuild rpmbuild/SRPMS/calcfiles-1.0-1.generic.src.rpm
+          cd ~/rpmbuild/
+          rpmbuild -bs --define "dist .generic" SPECS/calcfiles.spec
+          rpmbuild --rebuild SRPMS/calcfiles-1.0-1.generic.src.rpm
           
       - name: Upload RPM
         uses: actions/upload-artifact@v2
         with:
           name: rpm-package
           path: |
-            ~/rpmbuild/RPMS/**/*.rpm
-            ~/rpmbuild/SRPMS/**/*.src.rpm
+            RPMS/**/*.rpm
+            SRPMS/**/*.src.rpm
